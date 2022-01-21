@@ -36,7 +36,7 @@ def process(selection)
 end
 
 def save_students
-  # open the file for writing
+  # open the file for writing (this will also create the file if it does not exist)
   file = File.open("students.csv", "w")
   # iterate over the array of students
   @students.each do |student|
