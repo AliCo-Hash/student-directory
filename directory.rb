@@ -1,4 +1,3 @@
-require 'csv'
 @students = [] # an empty array accessible to all methods
 
 def print_menu
@@ -84,7 +83,7 @@ end
 def load_students(filename = "students.csv")
   file = File.open(filename, "r")
   file.readlines.each do |line|
-  name, cohort = line.chomp.split(',')
+    name, cohort = line.chomp.split(',')
     @students << {name: name, cohort: cohort.to_sym}
   end
   file.close
